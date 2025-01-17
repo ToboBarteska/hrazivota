@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Game of Life</title>
+    <link rel="stylesheet" href="life.css" />
+  </head>
+  <body>
+    <div id="gridContainer"></div>
+
+    <div id="controls">
+      <button id="start">Start</button>
+      <button id="clear">Clear</button>
+      <button id="random">Random</button>
+      <span id="generation">Generace: 0</span>
+    </div>
+
+    <div id="settings">
+      <label>
+        <input type="checkbox" id="smallCells" /> Malé buňky
+      </label>
+      <label>
+        <input type="checkbox" id="mediumCells" /> Střední buňky
+      </label>
+      <label>
+        <input type="checkbox" id="largeCells" /> Velké buňky
+      </label>
+      <button id="updateRules">Méně úmrtí</button>
+    </div>
+  </div>
+    
+
+    <script src="code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+body {
+  padding: 20px;
+  background-color: #444;
+}
+
+#gridContainer {
+  padding-bottom: 10px;
+}
+
+table {
+  background-color: gray;
+  border-spacing: 0px;
+}
+
+td {
+  border: 1px solid rgb(90, 90, 90);
+  width: 20px;
+  height: 20px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+#generation {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f39c12;
+  margin-top: 10px;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#generation:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+}
+
+#settings label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #ecf0f1;
+}
+
+#settings input[type="checkbox"] {
+  accent-color: #f39c12; /* Nastaví barvu zaškrtávacího políčka */
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+#settings input[type="checkbox"]:checked {
+  transform: scale(1.1); /* Zvýrazní políčko při zaškrtnutí */
+}
+
+#settings input[type="checkbox"]:focus {
+  outline: none;
+  border: 2px solid #f39c12;
+}
+
+#settings button {
+  background-color: #f39c12;
+  color: #2c3e50;
+  font-size: 1rem;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#settings button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+
+td.dead {
+  background-image: url('https://i1.wp.com/medikbrand.cz/wp-content/uploads/2019/09/lebka-sutury-01.jpg?fit=1039%2C1039&ssl=1');
+  background-size: cover;
+  background-position: center;
+}
+
+td.live {
+  background-color: white;
+}
+
+#generation {
+  color: white;
+}
+
+/* Media query pro mobilní rozlišení */
+@media (max-width: 768px) {
+body {
+  padding: 20px;
+  margin: 0;
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00);
+  background-size: 200% 200%; /* Úprava velikosti pozadí pro lepší efekt */
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+td.dead {
+  background-image: url('https://cdn.vectorstock.com/i/1000v/05/55/low-battery-red-color-image-vector-43900555.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+td.live {
+  background-image: url('data:image/png;base64,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');
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  background-color: black;
+  color: #f39c12;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #f39c12;
+  color: black;
+  transform: scale(1.1);
+}
+
+#generation {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f39c12;
+  margin-top: 10px;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#generation:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+}
+}
+
+
